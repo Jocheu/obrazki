@@ -83,6 +83,10 @@ class MainActivity : AppCompatActivity() {
         czyWlasnaWidoczne.setOnCheckedChangeListener{_, isChecked ->
             if(isChecked){
                 var visWlasna = ileWlasna.text.toString().toFloat();
+                if(visWlasna>1f){
+                    visWlasna = 1f
+                    ileWlasna.setText("1");
+                }
                 obrazekTu.alpha = visWlasna;
             }
             else{
